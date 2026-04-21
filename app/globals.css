@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 346 87% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 243 75% 59%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 346 87% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 243 75% 59%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Özel Stiller */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1600px;
+  }
+} 
+
+/* Temel scrollbar stili */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+/* Thumb (kaydırma çubuğu) stili */
+.scrollbar-thumb-gray-300 {
+  scrollbar-color: #d1d5db #f3f4f6; /* thumb ve track rengi birlikte */
+  transition: all 0.2s ease-in-out; /* yumuşak geçiş efekti */
+}
+
+/* Track (arka plan) stili */
+.scrollbar-track-gray-100 {
+  scrollbar-track: #f3f4f6;
+}
+
+/* Hover efekti için ek stil */
+.scrollbar-thumb-gray-300:hover {
+  scrollbar-color: #9ca3af #f3f4f6; /* hover'da daha koyu gri */
+}
+
+/* Webkit tarayıcılar için ek destek */
+@supports (-webkit-overflow-scrolling: touch) {
+  .scrollbar-thin {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 6px; /* yuvarlak kenarlar */
+    border: 2px solid transparent; /* boşluk efekti */
+    background-clip: content-box; /* kenar boşluğu için */
+  }
+  
+  .scrollbar-track-gray-100::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 6px;
+  }
+  
+  .scrollbar-thumb-gray-300::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+/* Scrollbar gizleme */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* reCAPTCHA badge mobile optimization */
+@media (max-width: 640px) {
+  .grecaptcha-badge {
+    display: none !important;
+  }
+}
+
+/* Mobile font size optimizations for admin panel */
+@media (max-width: 640px) {
+  /* Page titles */
+  h1 {
+    font-size: 1.5rem !important; /* 24px instead of default larger */
+    line-height: 2rem !important;
+  }
+  
+  /* Card titles */
+  .card-title, h2 {
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.75rem !important;
+  }
+  
+  /* Section headings */
+  h3 {
+    font-size: 1.125rem !important; /* 18px */
+    line-height: 1.5rem !important;
+  }
+  
+  /* Button text optimization */
+  .btn, button {
+    font-size: 0.875rem !important; /* 14px */
+  }
+  
+  /* Table and card content */
+  .table-cell, .card-content p, .card-content span {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.25rem !important;
+  }
+  
+  /* Form labels and inputs */
+  label, input, select, textarea {
+    font-size: 0.875rem !important; /* 14px */
+  }
+  
+  /* Badge and small text */
+  .badge, .text-xs {
+    font-size: 0.75rem !important; /* 12px */
+  }
+  
+  /* Muted text */
+  .text-muted-foreground, .text-sm {
+    font-size: 0.8125rem !important; /* 13px */
+  }
+}
+
+/* Fix focus border overflow issues across the project */
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+  border-color: rgb(59, 130, 246) !important;
+}
+
+/* Ensure focus rings don't cause overflow */
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+}
+
+.focus\:ring-blue-500:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* Container overflow fix for focus states */
+.container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl, .max-w-xl {
+  overflow: visible !important;
+}
+
+/* Specific fix for form containers */
+.space-y-4, .space-y-6, .grid, .flex {
+  overflow: visible !important;
+}
+
+/* Dialog fullscreen class - gelecekte kullanım için */
+/* .dialog-fullscreen {XXX} */

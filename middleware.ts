@@ -1,0 +1,145 @@
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import { getToken } from 'next-auth/jwt'
+
+// Giriş yapıldığında erişilmesi engellenecek rotalar
+const authRoutes = [
+  '/auth',
+]
+
+// Korumalı rotalar
+const protectedRoutes = [
+  '/dashboard',
+  '/add-listing',
+  '/edit-listing',
+  '/my-listings',
+  '/favorites',
+  '/sent-messages',
+  '/inbox',
+  '/profile',
+]
+
+// Admin rotaları
+const adminRoutes = [
+  '/management/dashboard',
+  '/management/ilanlar',
+  '/management/users',
+  '/management/settings',
+]
+
+// Public admin rotaları
+const publicAdminRoutes = [
+  '/management'
+]
+
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  // NextAuth API rotalarını atla
+  if (pathname.startsWith('/api/auth')) {
+    return NextResponse.next()
+  }
+
+  // NextAuth token kontrolü
+  const token = await getToken({ 
+    req: request, 
+    secret: process.env.NEXTAUTH_SECRET 
+  })
+
+  // Eğer kullanıcı giriş yapmışsa ve auth rotalarından birine erişmeye çalışıyorsa ana sayfaya yönlendir
+  if (token && authRoutes.some(route => pathname.startsWith(route))) {
+    return NextResponse.redirect(new URL('/', request.url))
+  }
+
+  // API istekleri için kontrol
+  if (pathname.startsWith('/api/')) {
+    if (pathname.startsWith('/api/auth')) {
+      return NextResponse.next()
+    }
+    
+    const publicApiRoutes = [
+      '/api/listings',
+      '/api/categories',
+      '/api/register',
+      '/api/verify-email',
+      '/api/reset-password',
+      '/api/forgot-password',
+      '/api/reset-password-verify',
+      '/api/resend-verification-email',
+    ]
+    
+    const isPublicApi = publicApiRoutes.some(route => 
+      pathname === route || pathname.startsWith(`${route}/`)
+    )
+    
+    if (isPublicApi) {
+      return NextResponse.next()
+    }
+    
+    if (pathname.startsWith('/api/admin/')) {
+      if (!token || token.type !== 'admin') {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      }
+      return NextResponse.next()
+    }
+    
+    if (!token) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+    
+    return NextResponse.next()
+  }
+
+  // Admin sayfaları kontrolü
+  if (pathname.startsWith('/management')) {
+    // Public admin rotalarını kontrol et
+    if (publicAdminRoutes.includes(pathname)) {
+      return NextResponse.next()
+    }
+
+    // Admin yetkisi kontrolü (tüm /management alt rotaları için)
+    if (!token || token.type !== 'admin') {
+      return NextResponse.redirect(new URL('/management', request.url))
+    }
+
+    // Admin rotasına erişim varsa devam et
+    return NextResponse.next()
+  }
+
+  // Korumalı rotalar için oturum kontrolü
+  if (protectedRoutes.some(route => pathname.startsWith(route))) {
+    if (!token) {
+      return NextResponse.redirect(new URL('/auth', request.url))
+    }
+  }
+
+  return NextResponse.next()
+}
+
+export const config = {
+  matcher: [
+    // ***eski matcher sistemi***
+    // '/dashboard/:path*',
+    // '/add-listing/:path*',
+    // '/edit-listing/:path*',
+    // '/my-listings/:path*',
+    // '/favorites/:path*',
+    // '/sent-messages/:path*',
+    // '/inbox/:path*',
+    // '/profile/:path*',
+    // '/management',
+    // '/management/:path*',
+    // '/api/:path*',
+    // '/auth/:path*',
+
+    // ***yeni matcher sistemi***
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - mertcin-anonym-mertcin-anonym-logo.png (favicon file)
+     * - public folder
+     */
+    '/((?!_next/static|_next/image|mertcin-anonym-mertcin-anonym-logo.png|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ]
+}
