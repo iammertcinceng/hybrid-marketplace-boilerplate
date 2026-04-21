@@ -10,7 +10,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import { fetchUnreadMessages } from "@/redux/slices/messageSlice";
 import { useEffect, useState } from "react";
 import { useSocket } from "@/providers/socket-provider";
-import MessagesView from "../mesaj-detay";
+import MessagesView from "../message-detail";
 import { cn } from "@/utils";
 // Skeleton Loader Component
 function SkeletonWrapper() {
@@ -115,8 +115,8 @@ export default function Messages({ type }: MessagesProps) {
       }),
     onSuccess: () => {
       toast({
-        title: "Başarılı",
-        description: "Konuşma başarıyla silindi",
+        title: "Success",
+        description: "Conversation deleted successfully",
       });
       queryClient.invalidateQueries({ queryKey: ["conversations", type] });
       dispatch(fetchUnreadMessages());
@@ -126,8 +126,8 @@ export default function Messages({ type }: MessagesProps) {
     },
     onError: () => {
       toast({
-        title: "Hata",
-        description: "Konuşma silinirken bir hata oluştu",
+        title: "Error",
+        description: "An error occurred while deleting conversation",
         variant: "destructive",
       });
     },
@@ -166,7 +166,7 @@ export default function Messages({ type }: MessagesProps) {
       {!selectedConversationId && isMobile && (
         <div className="mb-4 px-4 md:px-0">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            {type === "received" ? "Alınan Mesajlar" : "Gönderilen Mesajlar"}
+            {type === "received" ? "Alınan Mesajlar" : "Sent Messages"}
           </h1>
           <p className="text-gray-600">
             {type === "received"
@@ -179,7 +179,7 @@ export default function Messages({ type }: MessagesProps) {
       {!isMobile && (
         <div className="mb-4 px-4 md:px-0">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            {type === "received" ? "Alınan Mesajlar" : "Gönderilen Mesajlar"}
+            {type === "received" ? "Alınan Mesajlar" : "Sent Messages"}
           </h1>
           <p className="text-gray-600">
             {type === "received"

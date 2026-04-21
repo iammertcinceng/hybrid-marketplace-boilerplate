@@ -13,7 +13,7 @@ import {
   SelectGroup,
 } from "@app/components/ui/select";
 import { useQuery } from "@tanstack/react-query";
-import { getCityOptions } from "../lib/constants";
+import { getCityOptions } from "@app/lib/constants";
 
 // JSON verinizden gelen Category yapısına uygun tip tanımı
 interface Category {
@@ -107,7 +107,7 @@ export default function IlanSearch({ categories }: { categories: CategoryWithCou
         <div className="w-full md:flex-1">
           <Select name="city">
             <SelectTrigger>
-              <SelectValue placeholder="Tüm Şehirler" />
+              <SelectValue placeholder="All Cities" />
             </SelectTrigger>
             <SelectContent>
               {cityOptions.map((city) => (

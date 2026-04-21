@@ -12,7 +12,7 @@ import {
   SelectSeparator,
 } from "@app/components/ui/select";
 import { Button } from "@app/components/ui/button";
-import { CityOption } from "../../../lib/constants";
+import { CityOption } from "@app/lib/constants";
 
 type Props = {
   categories: Category[];
@@ -83,7 +83,7 @@ export default function CategoryDetailClient({
         <div className="w-full md:flex-1">
           <Select defaultValue={params.city} name="city">
             <SelectTrigger>
-              <SelectValue placeholder="Tüm Şehirler" />
+              <SelectValue placeholder="All Cities" />
             </SelectTrigger>
             <SelectContent>
               {cityList.map((city) => (

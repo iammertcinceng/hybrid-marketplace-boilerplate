@@ -83,7 +83,7 @@ export default function SiteSettingsPage({
     },
     onSuccess: () => {
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Site ayarları başarıyla güncellendi",
         duration: 3000,
       });
@@ -91,7 +91,7 @@ export default function SiteSettingsPage({
     },
     onError: (error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description:
           error instanceof Error
             ? error.message
@@ -145,7 +145,7 @@ export default function SiteSettingsPage({
     } catch (error) {
       console.error("Logo yükleme hatası:", error);
       toast({
-        title: "Hata",
+        title: "Error",
         description:
           error instanceof Error
             ? error.message
@@ -196,7 +196,7 @@ export default function SiteSettingsPage({
     } catch (error) {
       console.error("Favicon yükleme hatası:", error);
       toast({
-        title: "Hata",
+        title: "Error",
         description:
           error instanceof Error
             ? error.message

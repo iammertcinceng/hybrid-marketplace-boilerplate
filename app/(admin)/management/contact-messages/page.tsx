@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ContactMessagesPage } from '@app/components/admin/contact-messages';
-import ProtectedPageWrapper from '../../../components/admin/verification-pin/protected-page-wrapper';
+import ProtectedPageWrapper from "@app/components/admin/verification-pin/protected-page-wrapper";
 
 export const metadata = {
   title: 'İletişim Mesajları - Admin PIN Gerekli',

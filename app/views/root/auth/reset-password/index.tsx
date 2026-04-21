@@ -15,7 +15,7 @@ export default function ResetPasswordView({
       <div className="container flex items-center justify-center min-h-screen">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Hata</CardTitle>
+            <CardTitle>Error</CardTitle>
             <CardDescription>
               Geçersiz veya eksik şifre sıfırlama bağlantısı. Lütfen yeni bir şifre sıfırlama talebinde bulunun.
             </CardDescription>

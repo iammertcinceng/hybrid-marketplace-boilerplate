@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
       const reportedLink = `/management/users/${r.reportedUserId}`;
       const contentLink = r.reportType === "listing"
         ? `/management/listing/${r.contentId}`
-        : `/management/ilanmesajdetayi/${r.contentId}`;
+        : `/management/listing-message-detail/${r.contentId}`;
 
       return {
         ...r,

@@ -85,7 +85,7 @@ export default function ContactPage({ settings }: ContactPageProps) {
     } catch (error) {
       // Hata mesajı
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: error instanceof Error ? error.message : 'Mesaj gönderilirken bir hata oluştu',
         variant: 'destructive',
       });
@@ -97,7 +97,7 @@ export default function ContactPage({ settings }: ContactPageProps) {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 md:py-12">
       <div className="flex flex-col items-center mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">İletişim</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">Contact</h1>
         <p className="text-center text-muted-foreground max-w-2xl mb-8">
           Her türlü soru, öneri ve geri bildirimleriniz için bize ulaşabilirsiniz. En kısa sürede size dönüş yapacağız.
         </p>

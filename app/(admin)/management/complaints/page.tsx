@@ -1,4 +1,4 @@
-import ProtectedPageWrapper from '../../../components/admin/verification-pin/protected-page-wrapper';
+import ProtectedPageWrapper from "@app/components/admin/verification-pin/protected-page-wrapper";
 import ReportsAdminView from '@app/views/admin/complaints';
 
 export async function generateMetadata() {

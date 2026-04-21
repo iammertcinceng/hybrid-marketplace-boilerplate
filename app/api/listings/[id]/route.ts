@@ -7,10 +7,10 @@ import { getToken } from "next-auth/jwt";
 import { imageService } from "@/lib/image-service";
 import { v4 as uuidv4 } from "uuid";
 import { storage } from "@/lib/storage";
-import { r2Client } from "../../../lib/r2";
+import { r2Client } from "@app/lib/r2";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import * as sharp from "sharp";
-import { getListingImageUrl, getListingImagesUrls } from "../../../lib/r2";
+import { getListingImageUrl, getListingImagesUrls } from "@app/lib/r2";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/api/auth/auth-options";
 

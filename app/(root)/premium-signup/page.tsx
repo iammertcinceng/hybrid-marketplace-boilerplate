@@ -58,7 +58,7 @@ const PremiumUyeOlPage = async () => {
         <p className="text-lg text-gray-600 mb-8">
           Tüm premium avantajlarından faydalanıyorsunuz.
         </p>
-        <Link href="/premium-uyelik" className="text-indigo-600 hover:text-indigo-800 font-semibold">
+        <Link href="/premium-membership" className="text-indigo-600 hover:text-indigo-800 font-semibold">
           Üyelik Detaylarınızı Görüntüleyin &rarr;
         </Link>
       </div>

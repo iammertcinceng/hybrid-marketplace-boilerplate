@@ -2,7 +2,7 @@ import Messages from '@/views/root/messages'
 
 export async function generateMetadata() {
   return {
-    title: "Gönderilen Mesajlar",
+    title: "Sent Messages",
     description: "Gönderilen mesajlar sayfası",
   };
 }

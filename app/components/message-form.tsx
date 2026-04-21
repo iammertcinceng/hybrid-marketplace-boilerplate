@@ -213,7 +213,7 @@ export function MessageForm({
       } catch (error) {
         console.error("Kayıt başlatma hatası:", error);
         toast({
-          title: "Hata",
+          title: "Error",
           description:
             error instanceof Error ? error.message : "Ses kaydı başlatılamadı",
           variant: "destructive",
@@ -231,7 +231,7 @@ export function MessageForm({
 
         if (!ALLOWED_FILE_TYPES.includes(file.type)) {
           toast({
-            title: "Hata",
+            title: "Error",
             description: `Desteklenmeyen dosya türü: ${file.name}`,
             variant: "destructive",
           });
@@ -239,7 +239,7 @@ export function MessageForm({
         }
         if (file.size > maxSize) {
           toast({
-            title: "Hata",
+            title: "Error",
             description: `Dosya boyutu çok büyük: ${(
               file.size /
               (1024 * 1024)
@@ -314,7 +314,7 @@ export function MessageForm({
               setIsSending(false);
             } else {
               toast({
-                title: "Hata",
+                title: "Error",
                 description: response.error || "Mesaj gönderilemedi",
                 variant: "destructive",
               });
@@ -326,7 +326,7 @@ export function MessageForm({
         console.error("Mesaj gönderme hatası:", error);
         setIsSending(false);
         toast({
-          title: "Hata",
+          title: "Error",
           description:
             error instanceof Error ? error.message : "Mesaj gönderilemedi",
           variant: "destructive",
@@ -352,7 +352,7 @@ export function MessageForm({
 
     const handleError = (error: string) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error,
         variant: "destructive",
       });

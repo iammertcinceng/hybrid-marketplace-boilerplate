@@ -88,14 +88,14 @@ export default function PaymentSettingsPage() {
     },
     onSuccess: () => {
       toast({
-        title: 'Başarılı',
+        title: 'Success',
         description: 'Ticari ayarlar başarıyla güncellendi',
       });
       queryClient.invalidateQueries({ queryKey: ['/api/admin/payment-settings'] });
     },
     onError: (error: Error) => {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: error.message || 'Ayarlar güncellenirken bir hata oluştu',
         variant: 'destructive',
       });

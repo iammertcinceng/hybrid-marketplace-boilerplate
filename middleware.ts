@@ -22,7 +22,7 @@ const protectedRoutes = [
 // Admin rotaları
 const adminRoutes = [
   '/management/dashboard',
-  '/management/ilanlar',
+  '/management/listings',
   '/management/users',
   '/management/settings',
 ]

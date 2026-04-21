@@ -59,20 +59,20 @@ export function ResetPasswordForm({ token }: { token: string }) {
 
       if (response.ok) {
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: "Şifreniz başarıyla güncellendi. Lütfen yeni şifrenizle giriş yapın.",
         });
         router.push("/auth");
       } else {
         toast({
-          title: "Hata",
+          title: "Error",
           description: result.message || "Bir hata oluştu",
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Şifre güncellenirken bir hata oluştu",
         variant: "destructive",
       });

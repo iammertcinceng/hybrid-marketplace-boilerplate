@@ -70,13 +70,13 @@ export default function AltKategorilerPage() {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       setNewCategory({ name: "", parentId: categoryId, slug: "" });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Alt kategori eklendi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -102,13 +102,13 @@ export default function AltKategorilerPage() {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       setEditingCategory(null);
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Alt kategori güncellendi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -130,13 +130,13 @@ export default function AltKategorilerPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Alt kategori silindi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });

@@ -63,24 +63,24 @@ export function AdminHeaderClient({
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="flex items-center gap-2">
             <ListChecks className="w-4 h-4" />
-            <span className="hidden md:inline">İlan İşlemleri</span>
+            <span className="hidden md:inline">Listing Operations</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem asChild>
-            <Link href="/management/onaybekleyenilanlar" className="flex items-center w-full cursor-pointer">
+            <Link href="/management/pending-listings" className="flex items-center w-full cursor-pointer">
               <AlertTriangle className="w-4 h-4 mr-2" />
               Onay Bekleyen İlanlar
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-            <Link href="/management/aktifilanlar" className="flex items-center w-full cursor-pointer">
+            <Link href="/management/active-listings" className="flex items-center w-full cursor-pointer">
               <ListChecks className="w-4 h-4 mr-2" />
               Aktif İlanlar
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-            <Link href="/management/pasifilanlar" className="flex items-center w-full cursor-pointer">
+            <Link href="/management/inactive-listings" className="flex items-center w-full cursor-pointer">
               <PowerOff className="w-4 h-4 mr-2" />
               Pasif İlanlar
             </Link>
@@ -92,7 +92,7 @@ export function AdminHeaderClient({
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="flex items-center gap-2">
             <Settings className="w-4 h-4" />
-            <span className="hidden md:inline">Ayarlar</span>
+            <span className="hidden md:inline">Settings</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
@@ -135,24 +135,24 @@ export function AdminHeaderClient({
                     </Link>
                   ))}
                   {/* İlan İşlemleri (Mobil) */}
-                  <div className="mt-4 px-2 text-xs uppercase text-muted-foreground font-semibold">İlan İşlemleri</div>
-                  <Link href="/management/onaybekleyenilanlar" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Button variant={pathname === "/management/onaybekleyenilanlar" ? "default" : "ghost"} className={cn("w-full justify-start")}> 
+                  <div className="mt-4 px-2 text-xs uppercase text-muted-foreground font-semibold">Listing Operations</div>
+                  <Link href="/management/pending-listings" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant={pathname === "/management/pending-listings" ? "default" : "ghost"} className={cn("w-full justify-start")}> 
                       <AlertTriangle className="w-4 h-4 mr-2" /> Onay Bekleyen İlanlar
                     </Button>
                   </Link>
-                  <Link href="/management/aktifilanlar" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Button variant={pathname === "/management/aktifilanlar" ? "default" : "ghost"} className={cn("w-full justify-start")}> 
+                  <Link href="/management/active-listings" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant={pathname === "/management/active-listings" ? "default" : "ghost"} className={cn("w-full justify-start")}> 
                       <ListChecks className="w-4 h-4 mr-2" /> Aktif İlanlar
                     </Button>
                   </Link>
-                  <Link href="/management/pasifilanlar" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Button variant={pathname === "/management/pasifilanlar" ? "default" : "ghost"} className={cn("w-full justify-start")}> 
+                  <Link href="/management/inactive-listings" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant={pathname === "/management/inactive-listings" ? "default" : "ghost"} className={cn("w-full justify-start")}> 
                       <PowerOff className="w-4 h-4 mr-2" /> Pasif İlanlar
                     </Button>
                   </Link>
                   {/* Mobil Ayarlar Menüsü */}
-                  <div className="mt-4 px-2 text-xs uppercase text-muted-foreground font-semibold">Ayarlar</div>
+                  <div className="mt-4 px-2 text-xs uppercase text-muted-foreground font-semibold">Settings</div>
                   {settingsMenuItems.map((item) => (
                     <Link key={item.path} href={item.path} onClick={() => setIsMobileMenuOpen(false)}>
                       <Button

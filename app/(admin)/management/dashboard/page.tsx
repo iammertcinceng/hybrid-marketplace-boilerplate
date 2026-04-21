@@ -2,7 +2,7 @@ import ManagementHome from '@/views/admin/dashboard'
 
 export async function generateMetadata() {
   return {
-    title: "Yönetim Paneli",
+    title: "Admin Panel",
     description: "Yönetim paneli sayfası",
   };
 }

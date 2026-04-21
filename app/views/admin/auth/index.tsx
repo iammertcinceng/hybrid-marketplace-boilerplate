@@ -119,7 +119,7 @@ export default function AdminView() {
                   Giriş yapılıyor...
                 </>
               ) : (
-                "Giriş Yap"
+                "Login"
               )}
             </Button>
           </form>

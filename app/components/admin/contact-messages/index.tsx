@@ -93,7 +93,7 @@ export function ContactMessagesPage() {
       
     } catch (error) {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: error instanceof Error ? error.message : 'Mesajlar yüklenirken bir hata oluştu',
         variant: 'destructive',
       });
@@ -126,7 +126,7 @@ export function ContactMessagesPage() {
       }
 
       toast({
-        title: 'Başarılı',
+        title: 'Success',
         description: 'Mesaj okundu olarak işaretlendi',
       });
 
@@ -137,7 +137,7 @@ export function ContactMessagesPage() {
       
     } catch (error) {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: error instanceof Error ? error.message : 'Bir hata oluştu',
         variant: 'destructive',
       });
@@ -160,7 +160,7 @@ export function ContactMessagesPage() {
       }
 
       toast({
-        title: 'Başarılı',
+        title: 'Success',
         description: 'Mesaj başarıyla silindi',
       });
 
@@ -171,7 +171,7 @@ export function ContactMessagesPage() {
       
     } catch (error) {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: error instanceof Error ? error.message : 'Bir hata oluştu',
         variant: 'destructive',
       });

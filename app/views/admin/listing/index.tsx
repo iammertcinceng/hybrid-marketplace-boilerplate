@@ -120,14 +120,14 @@ export default function ListingDetailAdmin() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["pending-listings"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan onaylandı",
       });
-      router.push("/management/onaybekleyenilanlar");
+      router.push("/management/pending-listings");
     },
     onError: () => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "İlan onaylanırken bir hata oluştu",
         variant: "destructive",
       });
@@ -148,14 +148,14 @@ export default function ListingDetailAdmin() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["pending-listings"] });
       toast({
-        title: "Başarılı",
-        description: "İlan reddedildi",
+        title: "Success",
+        description: "Listing rejected",
       });
-      router.push("/management/onaybekleyenilanlar");
+      router.push("/management/pending-listings");
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -173,13 +173,13 @@ export default function ListingDetailAdmin() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin", "listing", id] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan yayına alındı",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -197,14 +197,14 @@ export default function ListingDetailAdmin() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-listings"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan silindi",
       });
-      router.push("/management/ilanlar");
+      router.push("/management/listings");
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });

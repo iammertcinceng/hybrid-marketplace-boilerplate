@@ -3,7 +3,7 @@ import { db } from "@shared/db";
 import { users } from '@shared/schemas';
 import { eq } from "drizzle-orm";
 import { getToken } from 'next-auth/jwt';
-import { uploadProfileImage } from '../../../lib/r2';
+import { uploadProfileImage } from "@app/lib/r2";
 
 export const dynamic = 'force-dynamic';
 

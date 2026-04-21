@@ -53,13 +53,13 @@ export default function InactiveListings() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["inactive-listings"] });
       toast({
-        title: "Başarılı",
-        description: "İlan reddedildi",
+        title: "Success",
+        description: "Listing rejected",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -78,13 +78,13 @@ export default function InactiveListings() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["inactive-listings"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan aktif edildi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -103,13 +103,13 @@ export default function InactiveListings() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["inactive-listings"] });
       toast({
-        title: "Başarılı",
-        description: "İlan ve ilgili tüm veriler silindi",
+        title: "Success",
+        description: "Listing and all related data deleted",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -281,16 +281,16 @@ export default function InactiveListings() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Pasif İlanlar</h1>
+      <h1 className="text-2xl font-bold mb-6">Inactive Listings</h1>
 
       <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Select value={selectedCategory} onValueChange={setSelectedCategory}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Kategori seçin" />
+            <SelectValue placeholder="Select Category" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value="all">Tüm Kategoriler</SelectItem>
+              <SelectItem value="all">All Categories</SelectItem>
               {categories.map((category) => (
                 <SelectItem key={category} value={category}>
                   {category}
@@ -302,11 +302,11 @@ export default function InactiveListings() {
 
         <Select value={selectedCity} onValueChange={setSelectedCity}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Şehir seçin" />
+            <SelectValue placeholder="Select City" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value="all">Tüm Şehirler</SelectItem>
+              <SelectItem value="all">All Cities</SelectItem>
               {cities.map((city) => (
                 <SelectItem key={city} value={city}>
                   {city}

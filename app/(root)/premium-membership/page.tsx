@@ -157,11 +157,11 @@ const PremiumUyelikPage = () => {
             </div>
 
             <div className="text-center">
-              <Link href="/premium-uye-ol" className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-block">
+              <Link href="/premium-signup" className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-block">
                 Hemen Premium'a Geç!
               </Link>
               <p className="mt-4 text-sm text-gray-500">
-                Premium üyelik hakkında daha fazla bilgi için <Link href="/premium-uye-ol" className="text-indigo-600 hover:underline">tıklayın</Link>.
+                Premium üyelik hakkında daha fazla bilgi için <Link href="/premium-signup" className="text-indigo-600 hover:underline">tıklayın</Link>.
               </p>
             </div>
           </div>

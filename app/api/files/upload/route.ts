@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
 import { getToken } from 'next-auth/jwt';
 import { PutObjectCommand } from '@aws-sdk/client-s3';
-import { r2Client } from '../../../lib/r2';
-import { isAllowedFileType, isAllowedFileSize, getMimeType } from '../../../lib/file-constants';
+import { r2Client } from "@app/lib/r2";
+import { isAllowedFileType, isAllowedFileSize, getMimeType } from "@app/lib/file-constants";
 import * as sharp from 'sharp';
 
 export const dynamic = 'force-dynamic';

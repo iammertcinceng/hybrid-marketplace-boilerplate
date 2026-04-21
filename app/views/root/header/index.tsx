@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "../../../components/ui/button";
+import { Button } from "@app/components/ui/button";
 import {
   Menu,
   X,
@@ -21,16 +21,16 @@ import { useState, useEffect, useRef } from "react"; // Added useRef
 import { useRouter, usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "@app/redux/hooks";
 import {
   fetchUnreadMessages,
   selectIncomingUnreadMessages,
   selectOutgoingUnreadMessages,
 } from "../../../redux/slices/messageSlice";
-import { Badge } from "../../../components/ui/badge";
+import { Badge } from "@app/components/ui/badge";
 import { useSocket } from "@/providers/socket-provider";
 import { cn } from "@/utils";
-import { useOnClickOutside } from "../../../hooks/use-on-click-outside"; // Import the hook
+import { useOnClickOutside } from "@app/hooks/use-on-click-outside"; // Import the hook
 import Image from "next/image";
 import { SiteSettings } from "@shared/schemas";
 import { Input } from "@app/components/ui/input";
@@ -116,10 +116,10 @@ export function Header({ settings }: HeaderProps) {
 
   const generalMenuItems: MenuItem[] = [
     {
-      label: "İletişim",
+      label: "Contact",
       icon: MessageSquare,
       path: "/contact",
-      name: "İletişim",
+      name: "Contact",
       href: "/contact",
       loggedIn: null,
     },
@@ -127,23 +127,23 @@ export function Header({ settings }: HeaderProps) {
 
   const profileDropdownItems: MenuItem[] = [
     {
-      label: "İlanlarım",
+      label: "My Listings",
       icon: ListPlus,
       path: "/my-listings",
-      name: "İlanlarım",
+      name: "My Listings",
       href: "/my-listings",
       loggedIn: true,
     },
     {
-      label: "Favorilerim",
+      label: "Favorites",
       icon: Star,
       path: "/favorites",
-      name: "Favorilerim",
+      name: "Favorites",
       href: "/favorites",
       loggedIn: true,
     },
     {
-      label: "Gelen Mesajlar",
+      label: "Inbox",
       icon: MessageCircle,
       path: "/inbox",
       unreadCount: incomingUnreadMessages,
@@ -152,7 +152,7 @@ export function Header({ settings }: HeaderProps) {
       loggedIn: true,
     },
     {
-      label: "Gönderilen Mesajlar",
+      label: "Sent Messages",
       icon: Send,
       path: "/sent-messages",
       unreadCount: outgoingUnreadMessages,
@@ -161,10 +161,10 @@ export function Header({ settings }: HeaderProps) {
       loggedIn: true,
     },
     {
-      label: "Profilim",
+      label: "My Profile",
       icon: User,
       path: "/profile",
-      name: "Profilim",
+      name: "My Profile",
       href: "/profile",
       loggedIn: true,
     },
@@ -264,7 +264,7 @@ export function Header({ settings }: HeaderProps) {
                 className="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors duration-300"
               >
                 <Home className="h-5 w-5" />
-                <span className="font-normal">Ana Sayfa</span>
+                <span className="font-normal">Home</span>
               </Link>
               {generalMenuItems.map((item) => (
                 <Link
@@ -425,7 +425,7 @@ export function Header({ settings }: HeaderProps) {
                 onClick={handleMobileLinkClick}
               >
                 <Home className="h-5 w-5 text-indigo-600" />
-                <span className="text-gray-800 font-medium">Ana Sayfa</span>
+                <span className="text-gray-800 font-medium">Home</span>
               </Link>
               {generalMenuItems.map((item) => (
                 <Link

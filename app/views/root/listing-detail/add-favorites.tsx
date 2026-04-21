@@ -32,11 +32,11 @@ export default function addToFavorites({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["favorites", id] });
       setIsFavorite(true);
-      toast({ title: "Başarılı", description: "İlan favorilere eklendi" });
+      toast({ title: "Success", description: "İlan favorilere eklendi" });
     },
     onError: () => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "İlan favorilere eklenemedi",
         variant: "destructive",
       });
@@ -51,11 +51,11 @@ export default function addToFavorites({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["favorites", id] });
       setIsFavorite(false);
-      toast({ title: "Başarılı", description: "İlan favorilerden çıkarıldı" });
+      toast({ title: "Success", description: "İlan favorilerden çıkarıldı" });
     },
     onError: () => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "İlan favorilerden çıkarılamadı",
         variant: "destructive",
       });

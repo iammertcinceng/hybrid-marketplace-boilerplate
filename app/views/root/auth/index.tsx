@@ -221,7 +221,7 @@ function LoginForm({
   React.useEffect(() => {
     if (authSuccessMessage) {
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: authSuccessMessage,
       });
       dispatch(clearAuthMessages()); // Mesajı temizle
@@ -231,7 +231,7 @@ function LoginForm({
     }
     if (authErrorMessage) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: authErrorMessage,
         variant: "destructive",
       });
@@ -414,7 +414,7 @@ const handleSubmit = async (data: z.infer<typeof formSchema>) => {
                 {isLoading ? "Giriş Yapılıyor..." : "İşleniyor..."} 
               </>
             ) : (
-              "Giriş Yap"
+              "Login"
             )}
           </Button>
           <Button
@@ -455,13 +455,13 @@ function ForgotPasswordForm() {
       if (response.ok) {
         const result = await response.json();
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: result.message || "Şifre sıfırlama bağlantısı gönderildi.",
         });
         form.reset();
       } else {
         toast({
-          title: "Hata",
+          title: "Error",
           description: "Şifre sıfırlama isteği gönderilemedi.",
           variant: "destructive",
         });
@@ -469,7 +469,7 @@ function ForgotPasswordForm() {
     } catch (error) {
       console.error("Password reset request error:", error);
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Şifre sıfırlama isteği gönderilemedi.",
         variant: "destructive",
       });
@@ -677,7 +677,7 @@ function RegisterForm({ onSubmit }: { onSubmit: (data: any) => void }) {
               Kayıt Yapılıyor...
             </>
           ) : (
-            "Kayıt Ol"
+            "Register"
           )}
         </Button>
       </form>

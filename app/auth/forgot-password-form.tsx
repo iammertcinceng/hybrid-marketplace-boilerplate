@@ -48,20 +48,20 @@ export function ForgotPasswordForm() {
 
       if (response.ok) {
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: "Şifre sıfırlama bağlantısı email adresinize gönderildi.",
         });
         form.reset();
       } else {
         toast({
-          title: "Hata",
+          title: "Error",
           description: result.message || "Bir hata oluştu",
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "İşlem sırasında bir hata oluştu",
         variant: "destructive",
       });

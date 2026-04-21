@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import ListingCardSimple from "../../../components/listing-card-simple";
+import ListingCardSimple from "@app/components/listing-card-simple";
 import { Loader2 } from "lucide-react";
 import { Listing } from "../../../types";
-import { Button } from "../../../components/ui/button";
-import { useDebounce } from "../../../hooks/use-debounce";
-import { getCityOptions } from "../../../lib/constants";
+import { Button } from "@app/components/ui/button";
+import { useDebounce } from "@app/hooks/use-debounce";
+import { getCityOptions } from "@app/lib/constants";
 
 export default function SearchView() {
   const searchParams = useSearchParams();

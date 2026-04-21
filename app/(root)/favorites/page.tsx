@@ -2,7 +2,7 @@ import FavoritesView from '@/views/root/favorites'
 
 export async function generateMetadata() {
   return {
-    title: "Favorilerim",
+    title: "Favorites",
     description: "Favorilerim sayfası",
   };
 }

@@ -2,7 +2,7 @@
 
 import { createContext, ReactNode, useContext } from "react";
 import { useQuery, useMutation, UseMutationResult } from "@tanstack/react-query";
-import { getQueryFn, queryClient } from "../lib/queryClient";
+import { getQueryFn, queryClient } from "@app/lib/queryClient";
 import { useToast } from "@app/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";

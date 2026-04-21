@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Category, Listing } from "@shared/schemas";
 import CategoryDetailClient from "@/views/root/category";
 import { cn } from "@/utils";
-import { getCityOptions } from "../../../../lib/constants";
+import { getCityOptions } from "@app/lib/constants";
 import { Metadata } from "next";
 import { FaqAccordion, type FaqItem } from "@app/components/FaqAccordion";
 import { createSeoUrl } from "@/utils/create-seo-url";
@@ -118,7 +118,7 @@ export default async function CategoryPage({
 
   // Create breadcrumbs data
   const breadcrumbs = [
-    { name: "Ana Sayfa", url: "/" },
+    { name: "Home", url: "/" },
     ...(parentCategory ? [{ name: parentCategory.name, url: `/category/${parentCategory.slug}` }] : []),
     { name: category.name, url: `/category/${category.slug}` },
     ...(city ? [{ name: city.charAt(0).toUpperCase() + city.slice(1), url: `/category/${category.slug}/${city}` }] : [])

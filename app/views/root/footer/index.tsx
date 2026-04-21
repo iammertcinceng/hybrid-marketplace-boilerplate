@@ -69,7 +69,7 @@ export function Footer({ settings }: FooterProps) {
 
           {/* Contact info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">İletişim</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
               {settings?.contact_phone.length > 1 && (
                 <li className="flex items-center gap-2">

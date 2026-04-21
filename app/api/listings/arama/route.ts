@@ -3,8 +3,8 @@ import type { NextRequest } from 'next/server'
 import { db } from '@shared/db';
 import { listings } from '@shared/schemas'
 import { eq, and, or, ilike, sql } from 'drizzle-orm'
-import { getListingImagesUrls } from '../../../lib/r2';
-import { validateAndNormalizeCity } from '../../../lib/constants';
+import { getListingImagesUrls } from "@app/lib/r2";
+import { validateAndNormalizeCity } from "@app/lib/constants";
 
 export const dynamic = 'force-dynamic';
 

@@ -95,7 +95,7 @@ export function AdminMessageForm({
   if (!user) {
     if (typeof window !== 'undefined') {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Oturum açmanız gerekiyor",
         variant: "destructive",
       });
@@ -109,7 +109,7 @@ export function AdminMessageForm({
 
     if (!socket) {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: 'Soket bağlantısı mevcut değil.',
         variant: 'destructive',
       });
@@ -118,7 +118,7 @@ export function AdminMessageForm({
 
     if (message.trim() === '') {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: 'Lütfen bir mesaj yazın.',
         variant: 'destructive',
       });
@@ -142,13 +142,13 @@ export function AdminMessageForm({
           setMessage('');
           onSuccess();
           toast({
-            title: 'Başarılı',
+            title: 'Success',
             description: 'Mesajınız başarıyla gönderildi.',
             variant: 'success',
           });
         } else {
           toast({
-            title: 'Hata',
+            title: 'Error',
             description: response.error || 'Mesaj gönderilemedi',
             variant: 'destructive',
           });

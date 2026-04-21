@@ -324,7 +324,7 @@ export default function FeaturesSection() {
                         <div>
                           <div className="text-[11px] font-medium text-gray-700 mb-1">Kategori</div>
                           <div className="relative h-11 bg-white rounded-lg border border-gray-200 shadow-sm px-3 flex items-center justify-between text-sm">
-                            <span className="text-gray-500">Kategori seçin</span>
+                            <span className="text-gray-500">Select Category</span>
                             <span className="text-gray-400">▾</span>
                           </div>
                         </div>

@@ -31,7 +31,7 @@ export function AdminPinModal({ isOpen, onClose, onSuccess }: AdminPinModalProps
   const handleVerifyPin = async () => {
     if (pin.length !== 6) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "PIN 6 haneli olmalıdır.",
         variant: "destructive",
       });
@@ -49,14 +49,14 @@ export function AdminPinModal({ isOpen, onClose, onSuccess }: AdminPinModalProps
 
       if (response.ok) {
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: "PIN doğrulandı.",
         });
         onSuccess();
       } else {
         const errorData = await response.text();
         toast({
-          title: "Hata",
+          title: "Error",
           description: errorData || "Geçersiz PIN.",
           variant: "destructive",
         });

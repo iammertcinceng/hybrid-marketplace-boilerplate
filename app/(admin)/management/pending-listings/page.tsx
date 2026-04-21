@@ -2,7 +2,7 @@ import PendingListings from '@/views/admin/pending-listings'
 
 export async function generateMetadata() {
   return {
-    title: "Onay Bekleyen İlanlar",
+    title: "Pending Listings",
     description: "Onay bekleyen ilanlar sayfası",
   };
 }

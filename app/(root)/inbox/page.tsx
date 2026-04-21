@@ -1,8 +1,8 @@
-import ReceivedMessagesView from '@/views/root/messages'
+import ReceivedMessagesView from '@/views/root/messages-list'
 
 export async function generateMetadata() {
   return {
-    title: "Gelen Mesajlar",
+    title: "Inbox",
     description: "Gelen mesajlar sayfası",
   };
 }

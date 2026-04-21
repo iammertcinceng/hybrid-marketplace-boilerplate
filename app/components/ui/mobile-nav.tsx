@@ -44,13 +44,13 @@ export function MobileNav() {
         <Link href="/my-listings" className="flex-1 min-w-0">
           <div className="flex flex-col items-center py-4 px-0.5">
             <ListPlus className="h-6 w-6" />
-            <span className="text-[10px] truncate mt-0.5">İlanlarım</span>
+            <span className="text-[10px] truncate mt-0.5">My Listings</span>
           </div>
         </Link>
         <Link href="/favorites" className="flex-1 min-w-0">
           <div className="flex flex-col items-center py-4 px-0.5">
             <Star className="h-6 w-6" />
-            <span className="text-[10px] truncate mt-0.5">Favorilerim</span>
+            <span className="text-[10px] truncate mt-0.5">Favorites</span>
           </div>
         </Link>
         <Link href="/sent-messages" className="flex-1 min-w-0">
@@ -84,7 +84,7 @@ export function MobileNav() {
         <Link href="/profile" className="flex-1 min-w-0">
           <div className="flex flex-col items-center py-4 px-0.5">
             <User className="h-6 w-6" />
-            <span className="text-[10px] truncate mt-0.5">Profilim</span>
+            <span className="text-[10px] truncate mt-0.5">My Profile</span>
           </div>
         </Link>
       </div>

@@ -1,5 +1,5 @@
 // AdminHeader.tsx (Server Component)
-import { Button } from "../../../components/ui/button";
+import { Button } from "@app/components/ui/button";
 import {
   Home,
   Users,
@@ -46,7 +46,7 @@ const menuItems = [
   },
   {
     label: "Mesajlar",
-    path: "/management/tummesajlar",
+    path: "/management/all-messages",
     icon: MessageSquare,
   },
   {
@@ -80,7 +80,7 @@ const settingsMenuItems = [
   },
   {
     label: "Admin Pin Değiştir",
-    path: "/management/admin-pin-degistir",
+    path: "/management/admin-pin-change",
     icon: KeyRound,
   },
 ];

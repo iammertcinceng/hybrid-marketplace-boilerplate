@@ -261,7 +261,7 @@ export default function KategorilerPage() {
         queryClient.setQueryData(["categories"], context.previousCategories);
       }
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Kategoriler yeniden sıralanırken bir hata oluştu.",
         variant: "destructive",
       });
@@ -325,7 +325,7 @@ export default function KategorilerPage() {
 
     if (!actualActiveCategory || !actualOverCategory) {
         toast({ 
-            title: "Hata", 
+            title: "Error", 
             description: "Sıralama için aktif veya hedef kategori bulunamadı.", 
             variant: "destructive" 
         });
@@ -425,13 +425,13 @@ export default function KategorilerPage() {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       setNewCategory({ name: "", parentId: null, slug: "" });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Kategori başarıyla eklendi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -449,13 +449,13 @@ export default function KategorilerPage() {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       setShowEditModal(false);
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Kategori başarıyla güncellendi",
       });
     },
     onError: () => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Kategori güncellenirken bir hata oluştu",
         variant: "destructive",
       });
@@ -495,13 +495,13 @@ export default function KategorilerPage() {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       setCategoryToDelete(null);
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Kategori başarıyla silindi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });

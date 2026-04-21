@@ -17,7 +17,7 @@ export default function VerifyEmailView() {
         const token = new URLSearchParams(window.location.search).get("token");
         if (!token) {
           toast({
-            title: "Hata",
+            title: "Error",
             description: "Doğrulama token'ı bulunamadı",
             variant: "destructive",
           });
@@ -31,7 +31,7 @@ export default function VerifyEmailView() {
         if (response.ok) {
           setVerified(true);
           toast({
-            title: "Başarılı",
+            title: "Success",
             description: "Email adresiniz başarıyla doğrulandı",
           });
           // 2 saniye sonra auth sayfasına yönlendir
@@ -40,7 +40,7 @@ export default function VerifyEmailView() {
           }, 2000);
         } else {
           toast({
-            title: "Hata",
+            title: "Error",
             description: data.error || "Email doğrulama işlemi başarısız oldu",
             variant: "destructive",
           });
@@ -50,7 +50,7 @@ export default function VerifyEmailView() {
         }
       } catch (error) {
         toast({
-          title: "Hata",
+          title: "Error",
           description: "Email doğrulama sırasında bir hata oluştu",
           variant: "destructive",
         });

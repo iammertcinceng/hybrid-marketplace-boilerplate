@@ -1,4 +1,4 @@
-import ListingDetailAdmin from '@/views/admin/ilan'
+import ListingDetailAdmin from '@/views/admin/listing'
 
 export async function generateMetadata() {
   return {

@@ -128,7 +128,7 @@ export default function CreateListing({ isAdmin = false, hasUsedFreeAd = false }
 
       if (!response.ok) {
         toast({
-          title: "Hata",
+          title: "Error",
           description: data.error,
           variant: "destructive",
         });
@@ -145,7 +145,7 @@ export default function CreateListing({ isAdmin = false, hasUsedFreeAd = false }
         // router.push(`/payment?listing_id=${data.id}`);
       } else {
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: "İlanınız onay için gönderildi",
         });
         router.push("/dashboard");
@@ -153,7 +153,7 @@ export default function CreateListing({ isAdmin = false, hasUsedFreeAd = false }
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message || "İlan oluşturulurken bir hata oluştu",
         variant: "destructive",
       });
@@ -228,7 +228,7 @@ export default function CreateListing({ isAdmin = false, hasUsedFreeAd = false }
                       <Select onValueChange={field.onChange}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Şehir seçin" />
+                            <SelectValue placeholder="Select City" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -254,7 +254,7 @@ export default function CreateListing({ isAdmin = false, hasUsedFreeAd = false }
                       <Select onValueChange={field.onChange}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Kategori seçin" />
+                            <SelectValue placeholder="Select Category" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>

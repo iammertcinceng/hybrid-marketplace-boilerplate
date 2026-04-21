@@ -170,7 +170,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                   <AlertTriangle className="h-5 w-5 text-red-400" />
                 </div>
                 <div className="ml-3">
-                  <h3 className="text-sm font-medium text-red-800">Hata</h3>
+                  <h3 className="text-sm font-medium text-red-800">Error</h3>
                   <div className="mt-2 text-sm text-red-700">
                     <p>{error}</p>
                   </div>
@@ -221,7 +221,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                 
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between pb-2">
-                    <CardTitle className="text-sm font-medium">Onay Bekleyen İlanlar</CardTitle>
+                    <CardTitle className="text-sm font-medium">Pending Listings</CardTitle>
                     <AlertTriangle className="h-4 w-4 text-amber-500" />
                   </CardHeader>
                   <CardContent>
@@ -229,7 +229,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                     <p className="text-xs text-muted-foreground">İnceleme bekliyor</p>
                   </CardContent>
                   <CardFooter>
-                    <Link href="/management/onaybekleyenilanlar" className="w-full">
+                    <Link href="/management/pending-listings" className="w-full">
                       <Button variant="outline" size="sm" className="w-full">
                         İncele
                       </Button>
@@ -239,7 +239,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                 
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between pb-2">
-                    <CardTitle className="text-sm font-medium">Aktif İlanlar</CardTitle>
+                    <CardTitle className="text-sm font-medium">Active Listings</CardTitle>
                     <CheckCircle2 className="h-4 w-4 text-green-500" />
                   </CardHeader>
                   <CardContent>
@@ -250,7 +250,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                 
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between pb-2">
-                    <CardTitle className="text-sm font-medium">Pasif İlanlar</CardTitle>
+                    <CardTitle className="text-sm font-medium">Inactive Listings</CardTitle>
                     <PowerOff className="h-4 w-4 text-gray-500" />
                   </CardHeader>
                   <CardContent>
@@ -271,7 +271,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                     <p className="text-xs text-muted-foreground">İlan mesajları</p>
                   </CardContent>
                   <CardFooter>
-                    <Link href="/management/tummesajlar" className="w-full">
+                    <Link href="/management/all-messages" className="w-full">
                       <Button variant="outline" size="sm" className="w-full">
                         Tüm Mesajlar
                       </Button>
@@ -291,7 +291,7 @@ export default function ManagementHome({ children }: { children?: React.ReactNod
                       <span>Üye Yönetimi</span>
                     </Button>
                   </Link>
-                  <Link href="/management/onaybekleyenilanlar">
+                  <Link href="/management/pending-listings">
                     <Button variant="outline" className="w-full h-20 flex flex-col items-center justify-center gap-2">
                       <AlertTriangle className="h-5 w-5" />
                       <span>Onay Bekleyenler</span>

@@ -2,7 +2,7 @@ import InactiveListings from '@/views/admin/inactive-listings'
 
 export async function generateMetadata() {
   return {
-    title: "Pasif İlanlar",
+    title: "Inactive Listings",
     description: "Pasif ilanlar sayfası",
   };
 }

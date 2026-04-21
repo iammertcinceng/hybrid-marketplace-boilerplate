@@ -62,13 +62,13 @@ export default function ListingCard({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["listings", "user"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan aktif hale getirildi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -89,13 +89,13 @@ export default function ListingCard({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["listings", "user"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan pasif hale getirildi",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });

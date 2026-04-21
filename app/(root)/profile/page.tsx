@@ -2,13 +2,13 @@ import { getServerSession } from "next-auth/next"
 import { db } from "@shared/db"
 import { users } from "@shared/schemas"
 import { eq } from "drizzle-orm"
-import Profile from '@/views/root/profile'
+import Profile from '@/views/root/user-profile'
 import { redirect } from "next/navigation"
 import { authOptions } from "@/api/auth/auth-options"
 
 export async function generateMetadata() {
   return {
-    title: "Profilim",
+    title: "My Profile",
     description: "Profilim sayfası",
   };
 }

@@ -17,7 +17,7 @@ import { queryClient } from "@/lib/queryClient";
 import { DataTable } from "@app/components/ui/data-table";
 import type { Row } from "@tanstack/react-table";
 import { Loader2, MessageCircle } from "lucide-react";
-import { ProtectedActionButton } from "../../../components/admin/verification-pin/protected-action-button";
+import { ProtectedActionButton } from "@app/components/admin/verification-pin/protected-action-button";
 
 interface User {
   id: number;
@@ -79,12 +79,12 @@ export default function UsersPage() {
       });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/users"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Kullanıcı durumu güncellendi",
       });
     } catch (error) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Kullanıcı durumu güncellenemedi",
         variant: "destructive",
       });
@@ -101,12 +101,12 @@ export default function UsersPage() {
       });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/users"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Kullanıcı silindi",
       });
     } catch (error) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Kullanıcı silinemedi",
         variant: "destructive",
       });

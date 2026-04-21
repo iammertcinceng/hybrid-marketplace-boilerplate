@@ -49,7 +49,7 @@ export default function SSSPage() {
       questions: [
         {
           question: 'Nasıl ilan verebilirim?',
-          answer: 'İlan vermek için öncelikle üye olmalısınız. Giriş yaptıktan sonra "Ücretsiz İlan Ver" butonuna tıklayarak ilan formumuzu doldurabilirsiniz. İlanınız onaylandıktan sonra yayına alınacaktır.'
+          answer: 'İlan vermek için öncelikle üye olmalısınız. Giriş yaptıktan sonra "Post Free Listing" butonuna tıklayarak ilan formumuzu doldurabilirsiniz. İlanınız onaylandıktan sonra yayına alınacaktır.'
         },
         {
           question: 'İlanım ne kadar sürede yayınlanır?',
@@ -57,7 +57,7 @@ export default function SSSPage() {
         },
         {
           question: 'İlanımı nasıl düzenleyebilirim?',
-          answer: 'İlanlarınızı düzenlemek için "İlanlarım" sayfasına giderek düzenlemek istediğiniz ilanı seçebilir ve "Düzenle" butonuna tıklayabilirsiniz. İlanlarınızda yapacağınız değişikliklerden sonra yeniden onay sürecinden geçmesi gerekebilir.'
+          answer: 'İlanlarınızı düzenlemek için "My Listings" sayfasına giderek düzenlemek istediğiniz ilanı seçebilir ve "Düzenle" butonuna tıklayabilirsiniz. İlanlarınızda yapacağınız değişikliklerden sonra yeniden onay sürecinden geçmesi gerekebilir.'
         },
         {
           question: 'İlanımı nasıl öne çıkarabilirim?',
@@ -100,7 +100,7 @@ export default function SSSPage() {
       questions: [
         {
           question: 'Sorun yaşadığımda kimle iletişime geçebilirim?',
-          answer: 'Herhangi bir sorun yaşadığınızda, "İletişim" sayfamız üzerinden bizimle iletişime geçebilir veya mertcin0@outlook.com adresine e-posta gönderebilirsiniz. Destek ekibimiz size en kısa sürede yardımcı olacaktır.'
+          answer: 'Herhangi bir sorun yaşadığınızda, "Contact" sayfamız üzerinden bizimle iletişime geçebilir veya mertcin0@outlook.com adresine e-posta gönderebilirsiniz. Destek ekibimiz size en kısa sürede yardımcı olacaktır.'
         },
         {
           question: 'Bir ilanı nasıl şikayet edebilirim?',

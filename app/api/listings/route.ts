@@ -7,14 +7,14 @@ import jwt from 'jsonwebtoken'
 import { v4 as uuidv4 } from 'uuid'
 import { storage } from '@/lib/storage';
 import { getToken } from 'next-auth/jwt';
-import { r2Client } from '../../lib/r2';
+import { r2Client } from "@app/lib/r2";
 import { PutObjectCommand } from '@aws-sdk/client-s3';
 import * as sharp from 'sharp';
-import { getListingImageUrl, getListingImagesUrls } from '../../lib/r2';
+import { getListingImageUrl, getListingImagesUrls } from "@app/lib/r2";
 
 export const dynamic = 'force-dynamic';
 
-import { validateAndNormalizeCity } from '../../lib/constants';
+import { validateAndNormalizeCity } from "@app/lib/constants";
 
 // Arama koşulu oluşturan yardımcı fonksiyon
 const createSearchCondition = (search: string): SQL<unknown> => {

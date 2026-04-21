@@ -91,7 +91,7 @@ export default function EditListing() {
       // Kullanıcı kontrolü
       if (!user || listing.userId !== user.id) {
         toast({
-          title: "Hata",
+          title: "Error",
           description: "Bu ilanı düzenleme yetkiniz yok",
           variant: "destructive",
         });
@@ -105,7 +105,7 @@ export default function EditListing() {
 
       if (!isRejected && !isExpired) {
         toast({
-          title: "Hata",
+          title: "Error",
           description: "Sadece reddedilmiş veya süresi dolmuş ilanlar düzenlenebilir",
           variant: "destructive",
         });
@@ -162,14 +162,14 @@ export default function EditListing() {
       queryClient.invalidateQueries({ queryKey: ["listings", "user"] });
 
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "İlan güncellendi ve onay için gönderildi",
       });
       router.push("/dashboard");
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -186,7 +186,7 @@ export default function EditListing() {
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message || "İlan düzenlenirken bir hata oluştu",
         variant: "destructive",
       });
@@ -281,7 +281,7 @@ export default function EditListing() {
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Şehir seçin" />
+                            <SelectValue placeholder="Select City" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -307,7 +307,7 @@ export default function EditListing() {
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Kategori seçin" />
+                            <SelectValue placeholder="Select Category" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>

@@ -120,7 +120,7 @@ export default function AllMessages() {
                   </TableCell>
                   <TableCell className="text-right">
                     <Link
-                      href={`/management/ilanmesajdetayi/${conversation.id}`}
+                      href={`/management/listing-message-detail/${conversation.id}`}
                       className="inline-flex items-center gap-1 text-primary hover:text-primary-dark transition-colors"
                     >
                       <MessageSquare className="h-4 w-4" />
@@ -181,7 +181,7 @@ export default function AllMessages() {
               
               <div className="pt-2 border-t">
                 <Link
-                  href={`/management/ilanmesajdetayi/${conversation.id}`}
+                  href={`/management/listing-message-detail/${conversation.id}`}
                   className="inline-flex items-center justify-center gap-1 text-primary hover:text-primary-dark transition-colors w-full py-1.5 px-2 rounded hover:bg-muted text-sm"
                 >
                   <MessageSquare className="h-3 w-3" />

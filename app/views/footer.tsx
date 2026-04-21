@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
+import { Button } from "@app/components/ui/button";
+import { Input } from "@app/components/ui/input";
 import { useState, useEffect } from "react";
 
 export function Footer() {
@@ -93,7 +93,7 @@ export function Footer() {
 
           {/* İletişim */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">İletişim</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-2 mt-1 text-blue-500" />

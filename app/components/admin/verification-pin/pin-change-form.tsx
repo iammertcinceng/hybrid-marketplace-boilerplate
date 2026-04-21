@@ -45,21 +45,21 @@ export function PinChangeForm() {
 
       if (response.ok) {
         toast({
-          title: 'Başarılı',
+          title: 'Success',
           description: 'PIN başarıyla güncellendi.',
         });
         form.reset();
       } else {
         const errorText = await response.text();
         toast({
-          title: 'Hata',
+          title: 'Error',
           description: `PIN güncellenemedi: ${errorText}`,
           variant: 'destructive',
         });
       }
     } catch (error) {
       toast({
-        title: 'Hata',
+        title: 'Error',
         description: 'Bir ağ hatası oluştu. Lütfen tekrar deneyin.',
         variant: 'destructive',
       });

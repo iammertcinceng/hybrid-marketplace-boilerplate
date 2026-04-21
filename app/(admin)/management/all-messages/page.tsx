@@ -1,5 +1,5 @@
 import AllMessages from '@/views/admin/all-messages';
-import ProtectedPageWrapper from '../../../components/admin/verification-pin/protected-page-wrapper';
+import ProtectedPageWrapper from "@app/components/admin/verification-pin/protected-page-wrapper";
 
 export async function generateMetadata() {
   return {

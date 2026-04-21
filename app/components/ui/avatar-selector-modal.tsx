@@ -44,12 +44,12 @@ export function AvatarSelectorModal({
       onOpenChange(false);
       // Başarı mesajı göster
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Avatar güncellendi",
       });
     } catch (error: any) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive"
       });

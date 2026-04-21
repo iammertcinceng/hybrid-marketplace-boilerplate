@@ -616,7 +616,7 @@ export default function MessagesView({
       setLocalMessages((prev) => prev.filter((msg) => msg.id !== messageId));
     } catch (error) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Mesaj silinemedi.",
         variant: "destructive",
       });

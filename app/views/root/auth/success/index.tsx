@@ -22,7 +22,7 @@ export default function AuthSuccessView() {
           "flex border-2 border-gray-300 items-center gap-2 px-8 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200"
         )}
       >
-        <span>Giriş Yap</span>
+        <span>Login</span>
       </Link>
     </div>
   );

@@ -194,7 +194,7 @@ export default function GizlilikPolitikasiPage() {
           <h2 className="text-2xl font-bold mb-4">9. İletişim</h2>
           <p className="text-muted-foreground">
             Bu Gizlilik Politikası veya kişisel verilerinizin işlenmesiyle ilgili sorularınız için 
-            lütfen mertcin0@outlook.com adresinden veya "İletişim" sayfamız aracılığıyla bizimle iletişime geçiniz.
+            lütfen mertcin0@outlook.com adresinden veya "Contact" sayfamız aracılığıyla bizimle iletişime geçiniz.
           </p>
         </CardContent>
       </Card>

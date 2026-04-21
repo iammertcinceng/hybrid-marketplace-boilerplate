@@ -67,11 +67,11 @@ export default function ListingDetailClient({
   //   onSuccess: () => {
   //     queryClient.invalidateQueries({ queryKey: ["favorites", id] });
   //     setIsFavorite(true);
-  //     toast({ title: "Başarılı", description: "İlan favorilere eklendi" });
+  //     toast({ title: "Success", description: "İlan favorilere eklendi" });
   //   },
   //   onError: () => {
   //     toast({
-  //       title: "Hata",
+  //       title: "Error",
   //       description: "İlan favorilere eklenemedi",
   //       variant: "destructive",
   //     });

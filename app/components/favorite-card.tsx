@@ -49,13 +49,13 @@ export default function FavoriteCard({ listing }: FavoriteCardProps) {
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ["favorites"] });
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: data.message || "İlan favorilerden çıkarıldı",
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });

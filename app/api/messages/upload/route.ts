@@ -8,9 +8,9 @@ import { PutObjectCommand } from '@aws-sdk/client-s3';
 import { sanitizeInput } from '@/lib/sanitize';
 import { getToken } from "next-auth/jwt";
 import * as sharp from "sharp";
-import { r2Client } from "../../../lib/r2";
-import { isAllowedFileType, isAllowedFileSize } from "../../../lib/file-constants";
-import { getMessageFileUrl } from "../../../lib/r2";
+import { r2Client } from "@app/lib/r2";
+import { isAllowedFileType, isAllowedFileSize } from "@app/lib/file-constants";
+import { getMessageFileUrl } from "@app/lib/r2";
 
 // Bucket tanımlaması
 const MESSAGE_BUCKET = "seriilan-mesaj-dosyalar";

@@ -1,4 +1,4 @@
-import KategorilerPage from '@/views/admin/categoryler'
+import KategorilerPage from '@/views/admin/categories'
 
 export async function generateMetadata() {
   return {

@@ -122,7 +122,7 @@ export default function HomePage({ categories, listingsCount, dailyListingsCount
       <div className="relative bg-gradient-to-b from-gray-50 to-white">
         <div className="w-full max-w-[1800px] mx-auto px-4 pt-8 pb-16 relative">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tüm Kategoriler</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">All Categories</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">İhtiyacınız olan her şeyi kolayca bulun. Binlerce ilan arasından size en uygun olanı seçin.</p>
           </div>
           

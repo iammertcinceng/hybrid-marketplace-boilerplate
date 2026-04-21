@@ -39,7 +39,7 @@ export default function MyListings({ initialListings }: MyListingsProps) {
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -60,7 +60,7 @@ export default function MyListings({ initialListings }: MyListingsProps) {
     },
     onError: (error: Error) => {
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message,
         variant: "destructive",
       });
@@ -81,12 +81,12 @@ export default function MyListings({ initialListings }: MyListingsProps) {
         await deleteMutation.mutateAsync(listingId);
         await refetch();
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: "İlan başarıyla silindi",
         });
       } catch (error: any) {
         toast({
-          title: "Hata",
+          title: "Error",
           description: error.message || "İlan silinirken bir hata oluştu",
           variant: "destructive",
         });
@@ -104,12 +104,12 @@ export default function MyListings({ initialListings }: MyListingsProps) {
         await deactivateMutation.mutateAsync(listingId);
         await refetch();
         toast({
-          title: "Başarılı",
+          title: "Success",
           description: "İlan başarıyla pasif duruma getirildi",
         });
       } catch (error: any) {
         toast({
-          title: "Hata",
+          title: "Error",
           description:
             error.message || "İlan pasif duruma getirilirken bir hata oluştu",
           variant: "destructive",
@@ -188,7 +188,7 @@ export default function MyListings({ initialListings }: MyListingsProps) {
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl min-h-[calc(100vh-200px)]">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">İlanlarım</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">My Listings</h1>
         <p className="text-gray-600">Toplam {totalCount} ilan bulunmakta</p>
       </div>
 

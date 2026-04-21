@@ -145,7 +145,7 @@ useEffect(() => {
                       listingId={selectedListingId ?? undefined}
                       onSuccess={() => {
                         toast({
-                          title: "Başarılı",
+                          title: "Success",
                           description: "Mesaj başarıyla gönderildi",
                         });
                         setIsMessageOpen(false);
@@ -172,7 +172,7 @@ useEffect(() => {
 
                 queryClient.invalidateQueries({ queryKey: [`/api/admin/users/${user.id}`] });
                 toast({
-                  title: "Başarılı",
+                  title: "Success",
                   description: "Kullanıcı durumu güncellendi"
                 });
 
@@ -180,7 +180,7 @@ useEffect(() => {
                 window.location.reload();
               } catch (error) {
                 toast({
-                  title: "Hata",
+                  title: "Error",
                   description: "Kullanıcı durumu güncellenemedi",
                   variant: "destructive"
                 });

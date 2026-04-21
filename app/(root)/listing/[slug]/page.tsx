@@ -3,10 +3,10 @@ import { authOptions } from "@/api/auth/auth-options"; // Adjust path as needed
 import { headers } from "next/headers";
 import Link from "next/link";
 import type { Category } from "@shared/schemas";
-import ListingDetailClient from "@/views/root/ilan-detay";
+import ListingDetailClient from "@/views/root/listing-detail";
 import { Metadata } from "next";
 import { getListingImageUrlClient } from "@/utils/get-message-file-url";
-import AddFavorites from "@/views/root/ilan-detay/add-favorites";
+import AddFavorites from "@/views/root/listing-detail/add-favorites";
 import { createSeoUrl } from "@/utils/create-seo-url";
 import NotFound from "../../../not-found";
 
@@ -925,7 +925,7 @@ export default async function ListingDetailPage({
                     ile ilanlarınız daha fazla kişiye ulaşsın!
                   </p>
                   <a
-                    href="/premium-uyelik"
+                    href="/premium-membership"
                     className="block w-full bg-white text-purple-700 text-center font-medium py-1.5 sm:py-2 px-3 sm:px-4 rounded-lg hover:bg-purple-50 transition-colors text-xs sm:text-sm"
                   >
                     Daha Fazla Bilgi

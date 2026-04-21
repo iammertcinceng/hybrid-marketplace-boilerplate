@@ -1,4 +1,4 @@
-import { PinChangeForm } from "../../../components/admin/verification-pin/pin-change-form";
+import { PinChangeForm } from "@app/components/admin/verification-pin/pin-change-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

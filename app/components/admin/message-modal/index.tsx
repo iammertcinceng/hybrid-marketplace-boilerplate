@@ -42,7 +42,7 @@ export function MessageModal({ isOpen, onClose, userId, username }: MessageModal
     
     if (!message.trim() && !selectedFile) {
       toast({
-        title: "Hata",
+        title: "Error",
         description: "Lütfen bir mesaj yazın veya dosya seçin",
         variant: "destructive",
       });
@@ -90,7 +90,7 @@ export function MessageModal({ isOpen, onClose, userId, username }: MessageModal
       }
 
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: `Mesaj ${username} kullanıcısına gönderildi`,
       });
       
@@ -100,7 +100,7 @@ export function MessageModal({ isOpen, onClose, userId, username }: MessageModal
     } catch (error) {
       console.error("Mesaj gönderme hatası:", error);
       toast({
-        title: "Hata",
+        title: "Error",
         description: error instanceof Error ? error.message : "Mesaj gönderilirken bir hata oluştu",
         variant: "destructive",
       });

@@ -2,7 +2,7 @@ import ActiveListingsView from '@/views/admin/active-listings'
 
 export async function generateMetadata() {
   return {
-    title: "Aktif İlanlar",
+    title: "Active Listings",
     description: "Aktif ilanlar sayfası",
   };
 }

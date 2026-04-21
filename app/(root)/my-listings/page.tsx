@@ -7,7 +7,7 @@ import MyListings from "@/views/root/my-listings";
 
 export async function generateMetadata() {
   return {
-    title: "İlanlarım",
+    title: "My Listings",
     description: "İlanlarım sayfası",
   };
 }

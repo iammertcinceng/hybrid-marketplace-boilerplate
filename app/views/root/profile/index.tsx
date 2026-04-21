@@ -73,7 +73,7 @@ export default function Profile({ initialData }: any) {
     onError: (error: Error) => {
       setLoading(false);
       toast({ 
-        title: "Hata", 
+        title: "Error", 
         description: error.message, 
         variant: "destructive" 
       });
@@ -92,7 +92,7 @@ export default function Profile({ initialData }: any) {
     },
     onSuccess: (data) => {
       toast({
-        title: "Başarılı",
+        title: "Success",
         description: "Hesabınız başarıyla silindi. 3 saniye içinde çıkış yapılacak.",
         variant: "success",
       });
@@ -103,7 +103,7 @@ export default function Profile({ initialData }: any) {
     onError: (error: Error) => {
       setLoading(false);
       toast({
-        title: "Hata",
+        title: "Error",
         description: error.message || "Hesap silinirken bir hata oluştu",
         variant: "destructive",
       });
@@ -118,7 +118,7 @@ export default function Profile({ initialData }: any) {
   const onSubmit = async (data: any) => {
     if (data.password && data.password !== data.passwordConfirm) {
       return toast({ 
-        title: "Hata", 
+        title: "Error", 
         description: "Şifreler eşleşmiyor", 
         variant: "destructive" 
       });
@@ -144,7 +144,7 @@ export default function Profile({ initialData }: any) {
     <div className="container min-h-screen pt-4 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Profilim</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">My Profile</h1>
         <p className="text-gray-600">
           Kişisel bilgilerinizi güncelleyebilirsiniz
         </p>
@@ -175,9 +175,9 @@ export default function Profile({ initialData }: any) {
                             if (!res.ok) throw new Error('Profil resmi silinemedi');
                           }
                           form.setValue('profileImage', '');
-                          toast({ title: "Başarılı", description: "Profil resmi kaldırıldı", variant: "success" });
+                          toast({ title: "Success", description: "Profil resmi kaldırıldı", variant: "success" });
                         } catch (error: any) {
-                          toast({ title: "Hata", description: error.message, variant: "destructive" });
+                          toast({ title: "Error", description: error.message, variant: "destructive" });
                         }
                       }}
                     >
@@ -207,9 +207,9 @@ export default function Profile({ initialData }: any) {
                           try {
                             const imageUrl = await uploadImage(file);
                             form.setValue('profileImage', imageUrl);
-                            toast({ title: "Başarılı", description: "Profil resmi güncellendi", variant: "success" });
+                            toast({ title: "Success", description: "Profil resmi güncellendi", variant: "success" });
                           } catch (error: any) {
-                            toast({ title: "Hata", description: error.message, variant: "destructive" });
+                            toast({ title: "Error", description: error.message, variant: "destructive" });
                           }
                         }
                       }}

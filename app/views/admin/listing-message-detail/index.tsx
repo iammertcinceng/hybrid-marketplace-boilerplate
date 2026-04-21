@@ -91,7 +91,7 @@ export default function AdminConversationDetail() {
       {/* Header */}
       <header className="flex items-center justify-between mb-8">
         <Link
-          href="/management/tummesajlar"
+          href="/management/all-messages"
           className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
         >
           <ArrowLeft className="h-5 w-5" />
